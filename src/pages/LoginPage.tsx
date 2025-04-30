@@ -1,10 +1,10 @@
-import { Login } from "../entities/Login";
+import { LoginPassw } from "../entities/LoginPassw";
 
 export default function LoginPage() {
     return (
         <div>
             <p>Login</p>
-            <Login />
+            <LoginPassw />
         </div>
 );
 }

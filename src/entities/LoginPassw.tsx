@@ -1,8 +1,9 @@
 import { Form } from "../components/Auth/Form";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { LoginGoogle } from "./LoginGoogle";
 
 
-export const Login = () => {
+export const LoginPassw = () => {
     const handleLogin = (email:string, password:string) => {
         const auth = getAuth();
         signInWithEmailAndPassword(auth, email, password)
@@ -19,6 +20,10 @@ export const Login = () => {
     }
 
     return(
-        <Form title="Sign In" handleClick={() => handleLogin}/>
+        <>
+            <Form title="Sign In" handleClick={() => handleLogin}/>
+            <LoginGoogle />
+        
+        </>
     );
 }
